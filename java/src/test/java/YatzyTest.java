@@ -6,17 +6,13 @@ public class YatzyTest {
 
     @Test
     public void chance_scores_sum_of_all_dice() {
-        int expected = 15;
-        int actual = new Yatzy(2, 3, 4, 5, 1).chance();
-        assertEquals(expected, actual);
+        assertEquals(15, new Yatzy(2, 3, 4, 5, 1).chance());
         assertEquals(16, new Yatzy(3, 3, 4, 5, 1).chance());
     }
 
     @Test
     public void yatzy_scores_50() {
-        int expected = 50;
-        int actual = new Yatzy(4, 4, 4, 4, 4).yatzy();
-        assertEquals(expected, actual);
+        assertEquals(50, new Yatzy(4, 4, 4, 4, 4).yatzy());
         assertEquals(50, new Yatzy(6, 6, 6, 6, 6).yatzy());
         assertEquals(0, new Yatzy(6, 6, 6, 6, 3).yatzy());
     }
